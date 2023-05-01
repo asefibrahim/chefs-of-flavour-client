@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaBeer, FaNutritionix } from 'react-icons/fa';
+import { FaNutritionix } from 'react-icons/fa';
 export const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
