@@ -1,68 +1,89 @@
 import React from 'react';
+
 import '@smastrom/react-rating/style.css'
 import { Rating } from '@smastrom/react-rating'
-const RecipeCard = ({ single }) => {
-    console.log(single);
+import { FaCheck, FaHeart } from 'react-icons/fa';
 
+const RecipeCard = ({ single }) => {
     const { name, rating, ingredients, image, method } = single
+
     return (
         <div>
+            <div className="px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:px-8 py-5"
 
-            <a href="#" class="group relative block overflow-hidden">
-                <button
-                    class="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75"
-                >
-                    <span class="sr-only">Wishlist</span>
+            ><div className="flex flex-col  overflow-hidden bg-black border rounded shadow-sm lg:flex-row sm:mx-auto">
 
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="h-4 w-4"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                    <div className="relative lg:w-1/2">
+                        <img
+                            src={image}
+                            className="object-cover w-full lg:absolute h-60 lg:h-full "
                         />
-                    </svg>
-                </button>
-
-                <img
-                    src="https://images.unsplash.com/photo-1599481238640-4c1288750d7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2664&q=80"
-                    alt=""
-                    class="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
-                />
-
-                <div class="relative border border-gray-100 bg-white p-6">
-                    <div className='flex items-center gap-5 justify-between'>
-                        < h1 className='text-xl font-bold'  > {name}</h1>
-                        <p className='flex items-center w-32 '>
-                            <Rating style={{ maxWidth: 250 }} value={rating} readOnly />
-
-                            <span>{rating}</span>
-                        </p>
-
-                    </div>
-
-                    <h3 class="mt-4 text-lg font-medium text-gray-900">Robot Toy</h3>
-
-                    <p class="mt-1.5 text-sm text-gray-700">$14.99</p>
-
-                    <form class="mt-4">
-                        <button
-                            class="block w-full rounded bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105"
+                        <svg
+                            className="absolute top-0 right-0 hidden h-full text-black lg:inline-block"
+                            viewBox="0 0 20 104"
+                            fill="currentColor"
                         >
-                            Add to Cart
-                        </button>
-                    </form>
+                            <polygon points="17.3036738 5.68434189e-14 20 5.68434189e-14 20 104 0.824555778 104" />
+                        </svg>
+                    </div>
+                    <div className="flex flex-col justify-center p-8  lg:p-16 lg:pl-10 lg:w-1/2">
+
+                        <div className='flex items-center gap-5 justify-between mb-5'>
+                            < h1 className=' font-bold text-4xl text-gray-300'  > {name}</h1>
+                            <p className='flex items-center w-32  text-gray-300 '>
+                                <Rating style={{ maxWidth: 250 }} value={rating} readOnly />
+
+                                <span >{rating}</span>
+                            </p>
+
+                        </div>
+                        <div className=''>
+                            <p>
+                                <p className='text-2xl font-bold  mb-3 text-gray-300 '>  Ingredient :</p>  {
+
+                                    ingredients.slice(0, 5).map(ing => {
+                                        return <p className='flex text-gray-300 gap-2 items-center '>
+
+                                            <span className='text-purple-500'>  <FaCheck></FaCheck></span>
+                                            {ing}</p>
+
+                                    })
+                                }
+
+                            </p>
+
+                            <p className='mt-4 mb-3 text-gray-300 '> <span className='text-xl font-bold text-gray-300'>Method </span>: {method}</p>
+                        </div>
+
+                        <div className="flex items-center">
+                            <button
+
+                                className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide bg-purple-700 text-white hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none    transition hover:scale-110 hover:shadow-xl"
+                            >
+                                Add to Favorite <FaHeart className='text-red-500 '></FaHeart>
+                            </button>
+                            <a
+                                href="/"
+                                aria-label=""
+                                className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800 text-gray-300 "
+                            >
+                                Learn More
+                                <svg
+                                    className="inline-block w-3 ml-2"
+                                    fill="currentColor"
+                                    viewBox="0 0 12 12"
+                                >
+                                    <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </a>
+            </div>
+
+        </div >
 
 
-        </div>
     );
 };
 

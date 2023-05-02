@@ -11,7 +11,7 @@ const RecipeBanner = ({ data }) => {
 
     return (
         <div>
-            <div class="relative bg-[url(https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)] bg-cover bg-center bg-no-repeat h-[600px] " >
+            <div class="relative bg-[url(https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)] bg-cover bg-center bg-no-repeat h-[700px] " >
                 <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 absolute inset-0 bg-black/50  sm:from-white/95 sm:to-white/25 ">
                     <div className="grid gap-10 row-gap-8 lg:grid-cols-2">
                         <div className="flex flex-col justify-center">
@@ -90,7 +90,7 @@ const RecipeBanner = ({ data }) => {
 
                                 <div>
                                     <a
-                                        class="flex items-center justify-center gap-2 text-white bg-purple-500  py-4  font-bold 
+                                        class="flex items-center justify-center gap-2 text-white bg-purple-800  py-4  font-bold 
 
                                     transition hover:scale-110 hover:shadow-xl
 
@@ -115,9 +115,9 @@ const RecipeBanner = ({ data }) => {
             </div>
 
 
-            <div>
-                <h1 className='text-6xl font-bold text-center  my-20'>{name}'s Recipe Here </h1>
-                <div className='grid md:grid-cols-3 gap-6 px-10 pt-12'>
+            <div className='bg-black'>
+                <h1 className='text-6xl font-bold text-center text-gray-200 py-12 '>{name}'s Recipe Here </h1>
+                <div className=' '>
                     {
                         data.recipes.map(single => <RecipeCard single={single}></RecipeCard>)
                     }

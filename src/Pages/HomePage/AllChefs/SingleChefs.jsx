@@ -9,7 +9,7 @@ const SingleChefs = ({ chef }) => {
     return (
         <div>
             <div>
-                <div className="relative overflow-hidden duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-4xl  transition">
+                <div className="relative overflow-hidden duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-4xl  transition  hover:border-purple-500/50 hover:shadow-purple-500/50">
                     <img
                         className="object-cover w-full h-64 md:max-h-80 xl:h-80"
                         src={image}
