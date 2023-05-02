@@ -22,35 +22,46 @@ const SingleChefs = ({ chef }) => {
                         <p className="mb-4  text-gray-300 font-semibold">
                             <span className='font-bold'>Years Of Experience   :  </span>   {yearsOfExperience
                             }</p>
-                        <p className='md:flex gap-2'>
+                        <div className=''>
+                            <p className='md:flex gap-2  '>
 
-                            <span
-                                class="inline-flex items-center justify-center rounded-full bg-purple-100 px-10 py-3 text-purple-700"
-                            >
-
-
-
-                                <p class="whitespace-nowrap text-sm flex items-center gap-2">
-                                    <span className='font-bold'> likes {likes} </span>
-                                    <span><FaHeart></FaHeart></span>
-                                </p>
-                            </span>
-                            <span
-                                class="inline-flex items-center justify-center rounded-full bg-purple-100 px-10 py-3 text-purple-700"
-                            >
+                                <span
+                                    class="inline-flex items-center 
+ 
+    
+                                    justify-center 
+    
+                                    border-2 border-purple-500 
+    
+    
+                                    rounded-full  px-10 py-3 text-white"
+                                >
 
 
 
-                                <p class="whitespace-nowrap text-sm flex items-center gap-2">
-                                    <span className='font-bold'>Recipes :    {numRecipes} </span>
-                                    <span><FaChessKing /></span>
-                                </p>
-                            </span>
+                                    <p class="whitespace-nowrap text-sm flex items-center gap-2">
+                                        <span className='font-bold'> likes {likes} </span>
+                                        <span><FaHeart></FaHeart></span>
+                                    </p>
+                                </span>
+                                <span
+                                    class="inline-flex items-center justify-center 
+    rounded-full  border-2  border-purple-500 px-10 py-3 text-white"
+                                >
 
-                        </p>
+
+
+                                    <p class="whitespace-nowrap text-sm flex items-center gap-2">
+                                        <span className='font-bold'>Recipes :    {numRecipes} </span>
+                                        <span><FaChessKing /></span>
+                                    </p>
+                                </span>
+
+                            </p>
+                        </div>
                         <div className='py-5 md:pt-10'>
                             <Link to={`/recipe/${id}`}
-                                class="inline-block rounded bg-purple-500
+                                class="inline-block rounded border-purple-500 border-2
                                 border-current px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-indigo-500"
 
                             >
