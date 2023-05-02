@@ -1,9 +1,13 @@
-import { useState } from "react";
-import { FaNutritionix } from 'react-icons/fa';
+import { useContext, useState } from "react";
+import { FaNutritionix, FaUser } from 'react-icons/fa';
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProvider";
 export const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+    const { user, logOut } = useContext(AuthContext)
+    const handleUser = () => {
+        logOut()
+    }
     return (
         <div class="bg-gray-900">
             <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
@@ -58,11 +62,23 @@ export const Navbar = () => {
 
 
 
+                        {
+                            user ? <li className="text-white mr-10 font-bold flex items-center gap-5 ">
+
+                                <p className="text-3xl">
+                                    <FaUser></FaUser>
+                                </p>
+                                <p className="hover:bg-purple-800 hover:border hover:rounded-xl px-5 py-3 ">
+                                    <NavLink onClick={handleUser} >Sign Out</NavLink>
+                                </p>
 
 
-                        <li className="text-white mr-10 font-bold">
-                            <NavLink className={({ isActive }) => (isActive ? 'text-purple-500' : 'default')} to='/login'>Login</NavLink>
-                        </li>
+                            </li> : <li className="text-white mr-10 font-bold">
+                                <NavLink className={({ isActive }) => (isActive ? 'text-purple-500' : 'default')} to='/login'>Login</NavLink>
+                            </li>
+                        }
+
+
 
 
 

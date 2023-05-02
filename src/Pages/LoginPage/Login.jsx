@@ -1,7 +1,39 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProvider';
 const Login = () => {
+    const { signIn } = useContext(AuthContext)
+    const [error, setError] = useState('')
+    const [success, setSuccess] = useState('')
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        setError('')
+        const form = e.target
+
+
+        const email = form.email.value
+        const password = form.password.value
+
+
+
+        signIn(email, password)
+            .then(result => {
+                const NewUser = result.user
+                console.log(NewUser);
+                setSuccess('You Have Successfully Logged in')
+                form.reset()
+            })
+            .catch(error => {
+                setError(error.message)
+            })
+
+
+
+    }
+
+
+
     return (
         <div>
 
@@ -52,26 +84,30 @@ const Login = () => {
 
                             <span class="w-1/5 border-b dark:border-gray-400 lg:w-1/4"></span>
                         </div>
+                        <form onSubmit={handleSubmit}>
 
-                        <div class="mt-4">
-                            <label class="block mb-2 text-sm font-medium text-gray-200 dark:text-gray-200" for="LoggingEmailAddress">Email Address</label>
-                            <input id="LoggingEmailAddress" class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300" type="email" />
-                        </div>
 
-                        <div class="mt-4">
-                            <div class="flex justify-between">
-                                <label class="block mb-2 text-sm font-medium text-gray-200 dark:text-gray-200" for="loggingPassword">Password</label>
-                                <a href="#" class="text-xs text-gray-200 dark:text-gray-300 hover:underline">Forget Password?</a>
+                            <div class="mt-4">
+                                <label class="block mb-2 text-sm font-medium text-gray-200 dark:text-gray-200" for="LoggingEmailAddress">Email Address</label>
+                                <input id="LoggingEmailAddress" class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300" type="email" name='email' />
                             </div>
 
-                            <input id="loggingPassword" class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300" type="password" />
-                        </div>
+                            <div class="mt-4">
+                                <div class="flex justify-between">
+                                    <label class="block mb-2 text-sm font-medium text-gray-200 dark:text-gray-200" for="loggingPassword">Password</label>
+                                    <a href="#" class="text-xs text-gray-200 dark:text-gray-300 hover:underline">Forget Password?</a>
+                                </div>
 
-                        <div class="mt-6">
-                            <button class="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-purple-800 rounded-lg hover:bg-slate-800 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50">
-                                Login In
-                            </button>
-                        </div>
+                                <input id="loggingPassword" class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300" type="password" name='password' />
+                            </div>
+
+                            <div class="mt-6">
+                                <button type='submit' class="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-purple-800 rounded-lg hover:bg-slate-800 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50">
+                                    Login In
+                                </button>
+                            </div>
+
+                        </form>
 
                         <div class="flex items-center justify-between mt-4">
                             <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
@@ -80,6 +116,9 @@ const Login = () => {
 
                             <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
                         </div>
+
+                        <p className='text-red-500 text-lg font-semibold pt-3 text-center'>{error}</p>
+                        <p className='text-green-400 text-lg font-semibold pt-3 text-center' >{success}</p>
 
 
 

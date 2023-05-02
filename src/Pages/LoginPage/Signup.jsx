@@ -1,7 +1,44 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProvider';
 const SignUp = () => {
+    const [error, setError] = useState('')
+    const [success, setSuccess] = useState('')
+    const { createUser } = useContext(AuthContext)
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        setError('')
+        const form = e.target
+        const name = form.name.value
+        const imageUrl = form.image.value
+        const email = form.email.value
+        const password = form.password.value
+        const confirm = form.confirm.value
+
+        if (password !== confirm) {
+            setError('Password Did not Match')
+        }
+        if (password.length < 6) {
+            setError('Password Should Be At Least Six Characters long')
+        }
+
+        createUser(email, password)
+            .then(result => {
+                const NewUser = result.user
+                console.log(NewUser);
+                setSuccess('Account Has Been Created Successfully')
+                form.reset()
+            })
+            .catch(error => {
+                setError(error.message)
+            })
+
+
+
+    }
+
+
     return (
         <div>
 
@@ -17,7 +54,7 @@ const SignUp = () => {
 
                     <section class=" dark:bg-gray-900">
                         <div class=" flex items-center justify-center px-10">
-                            <form class=" ">
+                            <form onSubmit={handleSubmit}>
 
 
                                 <div class="flex items-center justify-center text-5xl font-bold text-gray-200 mt-6 mb-20">
@@ -31,7 +68,10 @@ const SignUp = () => {
                                         </svg>
                                     </span>
 
-                                    <input type="text" class="block w-96 md:w-[500px] py-3 text-gray-700 bg-white border rounded-lg px-11 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Username" />
+                                    <input type="text" class="block w-96 md:w-[500px] py-3 text-gray-700 bg-white border rounded-lg px-11 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                                        placeholder="Username"
+
+                                        name='name' required />
                                 </div>
 
                                 <label for="dropzone-file" class="flex items-center px-3 py-3 mx-auto mt-6 text-center bg-white border-2 border-dashed rounded-lg cursor-pointer dark:border-gray-600 dark:bg-gray-900">
@@ -41,7 +81,7 @@ const SignUp = () => {
 
                                     <h2 class="mx-3 text-gray-400">Profile Photo</h2>
 
-                                    <input id="dropzone-file" type="file" class="hidden" />
+                                    <input className='bg-slate-100 rounded border border-purple-400' type="text" name='image' />
                                 </label>
 
                                 <div class="relative flex items-center mt-6">
@@ -51,7 +91,7 @@ const SignUp = () => {
                                         </svg>
                                     </span>
 
-                                    <input type="email" class="block w-full py-3 text-gray-700 bg-white border rounded-lg px-11 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Email address" />
+                                    <input type="email" class="block w-full py-3 text-gray-700 bg-white border rounded-lg px-11 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Email address" name='email' required />
                                 </div>
 
                                 <div class="relative flex items-center mt-4">
@@ -61,7 +101,7 @@ const SignUp = () => {
                                         </svg>
                                     </span>
 
-                                    <input type="password" class="block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Password" />
+                                    <input type="password" class="block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Password" name='password' required />
                                 </div>
 
                                 <div class="relative flex items-center mt-4">
@@ -71,8 +111,10 @@ const SignUp = () => {
                                         </svg>
                                     </span>
 
-                                    <input type="password" class="block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Confirm Password" />
+                                    <input type="password" class="block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Confirm Password" name='confirm' required />
                                 </div>
+                                <p className='text-red-500 text-lg font-semibold pt-3 text-center'>{error}</p>
+                                <p className='text-green-400 text-lg font-semibold pt-3 text-center' >{success}</p>
 
                                 <div class="mt-10">
                                     <button class="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-purple-800 rounded-lg hover:bg-slate-800 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
