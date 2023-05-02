@@ -49,7 +49,7 @@ const SingleChefs = ({ chef }) => {
                         </p>
                         <div className='py-5 md:pt-10'>
                             <a
-                                class="inline-block rounded border bg-purple-900
+                                class="inline-block rounded bg-purple-500
                                 border-current px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-indigo-500"
 
                             >
