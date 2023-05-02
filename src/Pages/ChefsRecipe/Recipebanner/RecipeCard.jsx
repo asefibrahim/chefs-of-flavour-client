@@ -13,10 +13,10 @@ const RecipeCard = ({ single }) => {
 
             ><div className="flex flex-col  overflow-hidden bg-black border rounded shadow-sm lg:flex-row sm:mx-auto">
 
-                    <div className="relative lg:w-1/2">
+                    <div className="relative overflow-hidden lg:w-1/2">
                         <img
                             src={image}
-                            className="object-cover w-full lg:absolute h-60 lg:h-full "
+                            className="object-cover w-full lg:absolute h-60 lg:h-full   transition hover:scale-125 duration-500 hover:shadow-xl"
                         />
                         <svg
                             className="absolute top-0 right-0 hidden h-full text-black lg:inline-block"

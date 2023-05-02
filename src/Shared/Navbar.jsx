@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaNutritionix } from 'react-icons/fa';
+import { Link, NavLink } from "react-router-dom";
 export const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -32,14 +33,14 @@ export const Navbar = () => {
                             </a>
                         </li>
                         <li>
-                            <a
-                                href="/"
+                            <Link to='/'
+
                                 aria-label="Product pricing"
-                                title="Product pricing"
+                                title="Main home"
                                 class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                             >
                                 Home
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                     <a
@@ -54,26 +55,17 @@ export const Navbar = () => {
                         </span>
                     </a>
                     <ul class="flex items-center hidden ml-auto space-x-8 lg:flex">
-                        <li>
-                            <a
-                                href="/"
-                                aria-label="Sign in"
-                                title="Sign in"
-                                class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
-                            >
-                                Sign in
-                            </a>
+
+
+
+
+
+                        <li className="text-white mr-10 font-bold">
+                            <NavLink className={({ isActive }) => (isActive ? 'text-purple-500' : 'default')} to='/login'>Login</NavLink>
                         </li>
-                        <li>
-                            <a
-                                href="/"
-                                class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                                aria-label="Sign up"
-                                title="Sign up"
-                            >
-                                Sign up
-                            </a>
-                        </li>
+
+
+
                     </ul>
                     <div class="ml-auto lg:hidden">
                         <button

@@ -103,9 +103,9 @@ const RecipeBanner = ({ data }) => {
 
                             </div>
                         </div>
-                        <div>
+                        <div className='overflow-hidden'>
                             <img
-                                className="object-cover w-full h-56 rounded shadow-lg sm:h-96 "
+                                className="object-cover w-full h-56 rounded shadow-lg sm:h-96 transition hover:scale-125 duration-500 hover:shadow-xl "
                                 src={image}
                                 alt=""
                             />
