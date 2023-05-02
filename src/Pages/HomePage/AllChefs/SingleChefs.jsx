@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaHeart, FaChessKing, FaGoogle } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 const SingleChefs = ({ chef }) => {
     console.log(chef);
     const { id, image, name, likes, numRecipes, yearsOfExperience
@@ -48,13 +49,13 @@ const SingleChefs = ({ chef }) => {
 
                         </p>
                         <div className='py-5 md:pt-10'>
-                            <a
+                            <Link to={`/recipe/${id}`}
                                 class="inline-block rounded bg-purple-500
                                 border-current px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-indigo-500"
 
                             >
                                 View Recipes
-                            </a>
+                            </Link>
                         </div>
                         <div className="flex items-center md:mt-12 justify-center space-x-3">
                             <a
