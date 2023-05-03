@@ -4,7 +4,7 @@ import SingleChefs from './SingleChefs';
 const Chefs = () => {
     const [Chefs, setChef] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/chefs')
+        fetch('https://cheifes-of-flavour-server-strongman01666-gmailcom.vercel.app/chefs')
             .then(res => res.json())
             .then(data => setChef(data))
     }, [])

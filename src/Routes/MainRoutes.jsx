@@ -17,7 +17,7 @@ const router = createBrowserRouter([
             {
                 path: 'recipe/:id',
                 element: <MainChefRecipe></MainChefRecipe>,
-                loader: ({ params }) => fetch(`http://localhost:5000/chefs/${params.id}`)
+                loader: ({ params }) => fetch(`https://cheifes-of-flavour-server-strongman01666-gmailcom.vercel.app/chefs/${params.id}`)
 
             },
             {

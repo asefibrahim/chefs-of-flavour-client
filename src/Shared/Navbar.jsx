@@ -68,7 +68,7 @@ export const Navbar = () => {
                                 <p className="text-3xl">
                                     <FaUser></FaUser>
                                 </p>
-                                <p className="hover:bg-purple-800 hover:border hover:rounded-xl px-5 py-3 ">
+                                <p className=":bg-purple-800 border rounded-xl px-5 py-3 ">
                                     <NavLink onClick={handleUser} >Sign Out</NavLink>
                                 </p>
 
