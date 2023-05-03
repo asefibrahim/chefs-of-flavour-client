@@ -26,6 +26,8 @@ const SignUp = () => {
         createUser(email, password)
             .then(result => {
                 const NewUser = result.user
+                NewUser.displayName = name
+                NewUser.photoUrl = imageUrl
                 console.log(NewUser);
                 setSuccess('Account Has Been Created Successfully')
                 form.reset()

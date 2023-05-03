@@ -5,6 +5,8 @@ import { AuthContext } from "../Providers/AuthProvider";
 export const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { user, logOut } = useContext(AuthContext)
+
+
     const handleUser = () => {
         logOut()
     }
@@ -36,15 +38,8 @@ export const Navbar = () => {
                                 Blogs
                             </a>
                         </li>
-                        <li>
-                            <Link to='/'
-
-                                aria-label="Product pricing"
-                                title="Main home"
-                                class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
-                            >
-                                Home
-                            </Link>
+                        <li className="font-medium tracking-wide text-gray-100 transition-colors duration-200 ">
+                            <NavLink className={({ isActive }) => (isActive ? 'text-purple-500' : 'default')} to='/'>Home</NavLink>
                         </li>
                     </ul>
                     <a
@@ -58,17 +53,18 @@ export const Navbar = () => {
                             Cheifes Of <span className="text-purple-500">Flavour</span>
                         </span>
                     </a>
-                    <ul class="flex items-center hidden ml-auto space-x-8 lg:flex">
+                    <ul class=" items-center hidden ml-auto space-x-8 lg:flex">
 
 
 
                         {
                             user ? <li className="text-white mr-10 font-bold flex items-center gap-5 ">
 
-                                <p className="text-3xl">
-                                    <FaUser></FaUser>
+                                <p title={user && user.displayName} className="text-3xl">
+                                    {user && <img className="w-12 rounded-full h-12" src={user.photoURL
+                                    } /> || <FaUser></FaUser>}
                                 </p>
-                                <p className=":bg-purple-800 border rounded-xl px-5 py-3 ">
+                                <p className=":bg-purple-800 border rounded-xl px-5 py-2 text-gray-300  transition hover:scale-110 hover:shadow-lg hover:text-purple-400 ">
                                     <NavLink onClick={handleUser} >Sign Out</NavLink>
                                 </p>
 

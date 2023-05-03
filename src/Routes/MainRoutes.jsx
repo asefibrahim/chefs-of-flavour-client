@@ -4,19 +4,23 @@ import HomePage from "../Pages/HomePage/HomePage";
 import MainChefRecipe from "../Pages/ChefsRecipe/MainChefRecipe";
 import Login from "../Pages/LoginPage/Login";
 import SignUp from "../Pages/LoginPage/Signup";
+import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../Pages/EroorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <MAinLayOut></MAinLayOut>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
-                element: <HomePage></HomePage>
+                element: <HomePage></HomePage>,
+
             },
             {
                 path: 'recipe/:id',
-                element: <MainChefRecipe></MainChefRecipe>,
+                element: <PrivateRoute><MainChefRecipe></MainChefRecipe></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://cheifes-of-flavour-server-strongman01666-gmailcom.vercel.app/chefs/${params.id}`)
 
             },
@@ -29,6 +33,7 @@ const router = createBrowserRouter([
                 element: <SignUp></SignUp>
             }
         ]
-    }
+    },
+
 ])
 export default router

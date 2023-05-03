@@ -1,11 +1,16 @@
 import React, { useContext, useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
+import { updateProfile } from 'firebase/auth';
 const Login = () => {
     const { signIn, googleSignIn, gitHubSignIn } = useContext(AuthContext)
     const [error, setError] = useState('')
     const [success, setSuccess] = useState('')
+    const location = useLocation()
+    console.log(location);
+    const navigate = useNavigate()
+    const from = location.state?.from?.pathname || '/'
 
     const handleGoogleLogin = () => {
         googleSignIn()
@@ -13,6 +18,7 @@ const Login = () => {
                 const newLoggedUser = result.user
                 console.log(newLoggedUser);
                 setSuccess("You Have Successfully Logged in by Google")
+                navigate(from, { replace: true })
                     .catch(error => {
                         setError(error.message)
                     })
@@ -55,10 +61,11 @@ const Login = () => {
 
 
 
+
+
+
+
     }
-
-
-
     return (
         <div>
 
