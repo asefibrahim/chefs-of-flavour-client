@@ -14,15 +14,15 @@ const Footer = () => {
                                 <ul className="mt-2 space-y-2">
                                     <li>
                                         <a
-                                            href="/"
+
                                             className="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            News
+                                            Food
                                         </a>
                                     </li>
                                     <li>
                                         <a
-                                            href="/"
+
                                             className="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
                                             World
@@ -30,89 +30,89 @@ const Footer = () => {
                                     </li>
                                     <li>
                                         <a
-                                            href="/"
+
                                             className="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            Games
+                                            News
                                         </a>
                                     </li>
                                     <li>
                                         <a
-                                            href="/"
+
                                             className="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            References
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <p className="font-medium tracking-wide text-gray-300">Apples</p>
-                                <ul className="mt-2 space-y-2">
-                                    <li>
-                                        <a
-                                            href="/"
-                                            className="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-200"
-                                        >
-                                            Web
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="/"
-                                            className="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-200"
-                                        >
-                                            eCommerce
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="/"
-                                            className="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-200"
-                                        >
-                                            Business
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="/"
-                                            className="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-200"
-                                        >
-                                            Entertainment
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="/"
-                                            className="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-200"
-                                        >
-                                            Portfolio
+                                            About us
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div>
-                                <p className="font-medium tracking-wide text-gray-300">Cherry</p>
+                                <p className="font-medium tracking-wide text-gray-300">Menu</p>
                                 <ul className="mt-2 space-y-2">
                                     <li>
                                         <a
-                                            href="/"
+
                                             className="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            Media
+                                            Golden Dragon
                                         </a>
                                     </li>
                                     <li>
                                         <a
-                                            href="/"
+
                                             className="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            Brochure
+                                            Spice Route
                                         </a>
                                     </li>
                                     <li>
                                         <a
-                                            href="/"
+
+                                            className="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-200"
+                                        >
+                                            Blue Ocean
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+
+                                            className="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-200"
+                                        >
+                                            Fire & Ice
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+
+                                            className="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-200"
+                                        >
+                                            Green Leaf
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p className="font-medium tracking-wide text-gray-300">Reservations </p>
+                                <ul className="mt-2 space-y-2">
+                                    <li>
+                                        <a
+
+                                            className="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-200"
+                                        >
+                                            Resy
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+
+                                            className="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-200"
+                                        >
+                                            OpenTable
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+
                                             className="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
                                             Nonprofit
@@ -120,18 +120,18 @@ const Footer = () => {
                                     </li>
                                     <li>
                                         <a
-                                            href="/"
+
                                             className="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            Educational
+                                            TableAgent
                                         </a>
                                     </li>
                                     <li>
                                         <a
-                                            href="/"
+
                                             className="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            Projects
+                                            Yelp Reservations
                                         </a>
                                     </li>
                                 </ul>
@@ -143,7 +143,7 @@ const Footer = () => {
                                 <ul className="mt-2 space-y-2">
                                     <li>
                                         <a
-                                            href="/"
+
                                             className="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
                                             Infopreneur
@@ -151,7 +151,7 @@ const Footer = () => {
                                     </li>
                                     <li>
                                         <a
-                                            href="/"
+
                                             className="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
                                             Personal
@@ -159,7 +159,7 @@ const Footer = () => {
                                     </li>
                                     <li>
                                         <a
-                                            href="/"
+
                                             className="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
                                             Wiki
@@ -167,7 +167,7 @@ const Footer = () => {
                                     </li>
                                     <li>
                                         <a
-                                            href="/"
+
                                             className="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
                                             Forum
@@ -189,7 +189,7 @@ const Footer = () => {
                                 />
                                 <button
                                     type="submit"
-                                    className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                    className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-gray-300 transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                                 >
                                     Subscribe
                                 </button>
@@ -206,7 +206,7 @@ const Footer = () => {
                         </p>
                         <div className="flex items-center mt-4 space-x-4 sm:mt-0">
                             <a
-                                href="/"
+
                                 className="text-gray-300 transition-colors duration-300 hover:text-teal-accent-400"
                             >
                                 <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
@@ -214,7 +214,7 @@ const Footer = () => {
                                 </svg>
                             </a>
                             <a
-                                href="/"
+
                                 className="text-gray-300 transition-colors duration-300 hover:text-teal-accent-400"
                             >
                                 <svg viewBox="0 0 30 30" fill="currentColor" className="h-6">
@@ -223,7 +223,7 @@ const Footer = () => {
                                 </svg>
                             </a>
                             <a
-                                href="/"
+
                                 className="text-gray-300 transition-colors duration-300 hover:text-teal-accent-400"
                             >
                                 <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">

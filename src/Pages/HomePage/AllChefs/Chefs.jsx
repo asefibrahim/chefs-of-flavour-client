@@ -18,7 +18,7 @@ const Chefs = () => {
                     <div>
 
                     </div>
-                    <h2 className="max-w-lg mb-6 font-sans text-4xl font-bold leading-none tracking-tight text-white sm:text-4xl md:mx-auto">
+                    <h2 className="max-w-lg mb-6 font-sans text-4xl font-bold leading-none tracking-tight text-gray-300 sm:text-4xl md:mx-auto">
                         <span className="relative inline-block">
 
                             <span className="relative text-5xl text-purple-500">Here's </span>

@@ -28,15 +28,15 @@ export const Navbar = () => {
                                 About us
                             </a>
                         </li>
-                        <li>
-                            <Link
-                                to="/blogs"
+                        <li className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400" >
+                            <NavLink to="/blogs"
+                                className={({ isActive }) => (isActive ? 'text-purple-500' : 'default')}
                                 aria-label="Our product"
                                 title="Our product"
-                                class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+
                             >
                                 Blogs
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="font-medium tracking-wide text-gray-100 transition-colors duration-200 ">
                             <NavLink className={({ isActive }) => (isActive ? 'text-purple-500' : 'default')} to='/'>Home</NavLink>
@@ -58,11 +58,12 @@ export const Navbar = () => {
 
 
                         {
-                            user ? <li className="text-white mr-10 font-bold flex items-center gap-5 ">
+                            user ? <li className="text-gray-300 mr-10 font-bold flex items-center gap-5 ">
 
                                 <p title={user && user.displayName} className="text-3xl">
-                                    {user && <img className="w-12 rounded-full h-12" src={user.photoURL
+                                    {user.photoURL && <img className="w-12 rounded-full h-12" src={user.photoURL
                                     } /> || <FaUser></FaUser>}
+
                                 </p>
                                 <p className=":bg-purple-800 border rounded-xl px-5 py-2 text-gray-300  transition hover:scale-110 hover:shadow-lg hover:text-purple-400 ">
                                     <NavLink onClick={handleUser} >Sign Out</NavLink>
@@ -128,7 +129,7 @@ export const Navbar = () => {
                                                     <rect x="14" y="11" width="7" height="12" />
                                                 </svg>
                                                 <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                                                    Company
+                                                    Chefs of FLavour
                                                 </span>
                                             </a>
                                         </div>
@@ -151,53 +152,44 @@ export const Navbar = () => {
                                     <nav>
                                         <ul class="space-y-4">
                                             <li>
-                                                <a
-                                                    href="/"
+                                                <Link to='/'
+
                                                     aria-label="Our product"
                                                     title="Our product"
                                                     class="font-medium tracking-wide text-gray-300transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
-                                                    Product
-                                                </a>
+                                                    Home
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a
-                                                    href="/"
+                                                <Link to='/blogs'
+
                                                     aria-label="Our product"
                                                     title="Our product"
                                                     class="font-medium tracking-wide text-gray-300transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
-                                                    Features
-                                                </a>
+                                                    Blogs
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a
-                                                    href="/"
+                                                <Link
+                                                    to="/login"
                                                     aria-label="Product pricing"
                                                     title="Product pricing"
                                                     class="font-medium tracking-wide text-gray-300transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
-                                                    Pricing
-                                                </a>
+                                                    Login
+                                                </Link>
                                             </li>
+
                                             <li>
                                                 <a
-                                                    href="/"
-                                                    aria-label="Sign in"
-                                                    title="Sign in"
-                                                    class="font-medium tracking-wide text-gray-300transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                                >
-                                                    Sign in
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="/"
-                                                    class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+
+                                                    class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-gray-700 transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                                                     aria-label="Sign up"
                                                     title="Sign up"
                                                 >
-                                                    Sign up
+                                                    About us
                                                 </a>
                                             </li>
                                         </ul>

@@ -1,11 +1,18 @@
 import React, { useContext, useState } from 'react';
-import { FaGithub } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 const SignUp = () => {
     const [error, setError] = useState('')
     const [success, setSuccess] = useState('')
     const { createUser } = useContext(AuthContext)
+    const location = useLocation()
+    console.log(location);
+
+    const navigate = useNavigate()
+    const from = location.state?.from?.pathname || '/'
+
+
     const handleSubmit = (e) => {
         e.preventDefault()
         setError('')
@@ -18,9 +25,11 @@ const SignUp = () => {
 
         if (password !== confirm) {
             setError('Password Did not Match')
+            return
         }
         if (password.length < 6) {
             setError('Password Should Be At Least Six Characters long')
+            return
         }
 
         createUser(email, password)
@@ -30,6 +39,7 @@ const SignUp = () => {
                 NewUser.photoUrl = imageUrl
                 console.log(NewUser);
                 setSuccess('Account Has Been Created Successfully')
+                navigate(from, { replace: true })
                 form.reset()
             })
             .catch(error => {
@@ -119,12 +129,12 @@ const SignUp = () => {
                                 <p className='text-green-400 text-lg font-semibold pt-3 text-center' >{success}</p>
 
                                 <div class="mt-10">
-                                    <button class="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-purple-800 rounded-lg hover:bg-slate-800 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+                                    <button class="w-full px-6 py-3 text-sm font-medium tracking-wide text-gray-300 capitalize transition-colors duration-300 transform bg-purple-800 rounded-lg hover:bg-slate-800 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
                                         Sign Up
                                     </button>
 
                                     <div class="mt-6 text-center ">
-                                        <Link to='/login' class="text-sm text-white hover:underline dark:text-blue-400">
+                                        <Link to='/login' class="text-sm text-gray-300 hover:underline dark:text-blue-400">
                                             Already have an account? Please Login !
                                         </Link>
                                     </div>

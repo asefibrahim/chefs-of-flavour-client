@@ -21,11 +21,11 @@ const QnA = () => {
 
             <section class="bg-black ">
                 <div class="container px-6 py-12 mx-auto">
-                    <h1 class="text-2xl font-semibold text-gray-300 text-center lg:text-3xl dark:text-white">Frequently asked questions.</h1>
+                    <h1 class="text-2xl font-semibold text-gray-300 text-center lg:text-3xl dark:text-gray-300">Frequently asked questions.</h1>
 
                     <div class="grid grid-cols-1 gap-8 mt-8 lg:mt-16 md:grid-cols-2 xl:grid-cols-2">
                         <div>
-                            <div class="inline-block p-3 text-white bg-purple-600 rounded-lg">
+                            <div class="inline-block p-3 text-gray-300 bg-purple-600 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
@@ -43,14 +43,14 @@ const QnA = () => {
                         </div>
 
                         <div>
-                            <div class="inline-block p-3 text-white bg-purple-600 rounded-lg">
+                            <div class="inline-block p-3 text-gray-300 bg-purple-600 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
                             </div>
 
                             <div>
-                                <h1 class="text-xl font-semibold text-gray-300 dark:text-white">How to validate React props using PropTypes</h1>
+                                <h1 class="text-xl font-semibold text-gray-300 dark:text-gray-300">How to validate React props using PropTypes</h1>
 
                                 <p class="mt-2 text-sm text-gray-300 dark:text-gray-300">
                                     In React, PropTypes is a built-in library that allows developers to specify the expected data type and structure of props that a component receives. This helps to ensure that the component is being used correctly and can help prevent bugs caused by unexpected data.
@@ -67,14 +67,14 @@ const QnA = () => {
                         </div>
 
                         <div>
-                            <div class="inline-block p-3 text-white bg-purple-600 rounded-lg">
+                            <div class="inline-block p-3 text-gray-300 bg-purple-600 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
                             </div>
 
                             <div>
-                                <h1 class="text-xl font-semibold text-gray-300 dark:text-white"> What are the difference between nodejs and express js.</h1>
+                                <h1 class="text-xl font-semibold text-gray-300 dark:text-gray-300"> What are the difference between nodejs and express js.</h1>
 
                                 <p class="mt-2 text-sm text-gray-300 dark:text-gray-300">
                                     Node.js and Express.js are both important tools for building server-side applications with JavaScript, but they serve different purposes and have different features.
@@ -87,14 +87,14 @@ const QnA = () => {
                         </div>
 
                         <div>
-                            <div class="inline-block p-3 text-white bg-purple-600 rounded-lg">
+                            <div class="inline-block p-3 text-gray-300 bg-purple-600 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
                             </div>
 
                             <div>
-                                <h1 class="text-xl font-semibold text-gray-300 dark:text-white">What is a custom hook, and why will you create a custom hook?</h1>
+                                <h1 class="text-xl font-semibold text-gray-300 dark:text-gray-300">What is a custom hook, and why will you create a custom hook?</h1>
 
                                 <p class="mt-2 text-sm text-gray-300 dark:text-gray-300">
                                     custom hook is a JavaScript function that starts with the prefix "use" and allows you to encapsulate and reuse stateful logic across multiple components. Custom hooks allow you to share stateful logic between components without the need for higher-order components or render props.

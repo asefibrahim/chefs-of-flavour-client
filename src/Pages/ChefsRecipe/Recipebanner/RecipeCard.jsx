@@ -72,12 +72,12 @@ const RecipeCard = ({ single }) => {
 
                                 className={`${!fav && " btn-disabled bg-purple-400 "}
                               flex gap-3
-                              items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide bg-purple-700 text-white hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none    transition hover:scale-110 hover:shadow-xl`}
+                              items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide bg-purple-700 text-gray-300 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none    transition hover:scale-110 hover:shadow-xl`}
                             >
-                                {!fav ? <p>Already Added</p> : <p>  Add to Favorite</p>}   <FaHeart className={`${!fav ? "text-red-500" : "text-white"}`}></FaHeart>
+                                {!fav ? <p>Already Added</p> : <p>  Add to Favorite</p>}   <FaHeart className={`${!fav ? "text-red-500" : "text-gray-300"}`}></FaHeart>
                             </button>
                             <a
-                                href="/"
+
                                 aria-label=""
                                 className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800 text-gray-300 "
                             >

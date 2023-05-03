@@ -8,7 +8,7 @@ const MainChefRecipe = () => {
 
 
     return (
-        <div>
+        <div >
             <RecipeBanner data={data}></RecipeBanner>
         </div>
     );

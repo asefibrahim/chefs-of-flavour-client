@@ -5,7 +5,7 @@ import Footer from '../../Shared/Footer';
 
 const MAinLayOut = () => {
     return (
-        <div>
+        <div className='min-h-[calc(100vh-136px)]'>
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
