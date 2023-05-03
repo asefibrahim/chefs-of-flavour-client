@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazy-load';
 
 const SecondExSection = () => {
     return (
@@ -83,22 +84,40 @@ const SecondExSection = () => {
 
 
                     </div>
-                    <div className="grid grid-cols-2 gap-5">
-                        <img
-                            className="object-cover w-full h-56 col-span-2 rounded shadow-lg hover:scale-110 transition-all duration-300 cursor-pointer hover:shadow-2xl"
-                            src="https://images.unsplash.com/photo-1571903244693-227d7733a917?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                            alt=""
-                        />
-                        <img
-                            className="object-cover w-full h-48 rounded shadow-lg hover:scale-125 transition-all duration-300 cursor-pointer hover:shadow-2xl"
-                            src="https://images.unsplash.com/photo-1575691386840-d355059d6341?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                            alt=""
-                        />
-                        <img
-                            className="object-cover w-full h-48 rounded shadow-lg hover:scale-125 transition-all duration-300 cursor-pointer hover:shadow-2xl"
-                            src="https://images.unsplash.com/photo-1572054466274-25b4ed6d6899?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                            alt=""
-                        />
+                    <div className="grid grid-cols-2 gap-5 overflow-hidden">
+
+
+                        <div className='col-span-2 '>
+                            <LazyLoad>
+
+                                <img
+                                    className="object-cover w-full h-56 rounded shadow-lg hover:scale-110 transition-all duration-300 cursor-pointer hover:shadow-2xl"
+                                    src="https://images.unsplash.com/photo-1571903244693-227d7733a917?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                    alt=""
+                                />
+                            </LazyLoad>
+                        </div>
+
+
+
+                        <div className='overflow-hidden'>
+                            <LazyLoad>
+                                <img
+                                    className="object-cover w-full h-48 rounded shadow-lg hover:scale-125 transition-all duration-300 cursor-pointer hover:shadow-2xl"
+                                    src="https://images.unsplash.com/photo-1575691386840-d355059d6341?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                    alt=""
+                                />
+                            </LazyLoad>
+                        </div>
+                        <div className='overflow-hidden'>
+                            <LazyLoad>
+                                <img
+                                    className="object-cover w-full h-48 rounded shadow-lg hover:scale-125 transition-all duration-300 cursor-pointer hover:shadow-2xl"
+                                    src="https://images.unsplash.com/photo-1572054466274-25b4ed6d6899?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                    alt=""
+                                />
+                            </LazyLoad>
+                        </div>
                     </div>
                 </div>
             </div>

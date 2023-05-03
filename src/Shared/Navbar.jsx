@@ -29,14 +29,14 @@ export const Navbar = () => {
                             </a>
                         </li>
                         <li>
-                            <a
-                                href="/"
+                            <Link
+                                to="/blogs"
                                 aria-label="Our product"
                                 title="Our product"
                                 class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                             >
                                 Blogs
-                            </a>
+                            </Link>
                         </li>
                         <li className="font-medium tracking-wide text-gray-100 transition-colors duration-200 ">
                             <NavLink className={({ isActive }) => (isActive ? 'text-purple-500' : 'default')} to='/'>Home</NavLink>
@@ -155,7 +155,7 @@ export const Navbar = () => {
                                                     href="/"
                                                     aria-label="Our product"
                                                     title="Our product"
-                                                    class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    class="font-medium tracking-wide text-gray-300transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
                                                     Product
                                                 </a>
@@ -165,7 +165,7 @@ export const Navbar = () => {
                                                     href="/"
                                                     aria-label="Our product"
                                                     title="Our product"
-                                                    class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    class="font-medium tracking-wide text-gray-300transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
                                                     Features
                                                 </a>
@@ -175,7 +175,7 @@ export const Navbar = () => {
                                                     href="/"
                                                     aria-label="Product pricing"
                                                     title="Product pricing"
-                                                    class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    class="font-medium tracking-wide text-gray-300transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
                                                     Pricing
                                                 </a>
@@ -185,7 +185,7 @@ export const Navbar = () => {
                                                     href="/"
                                                     aria-label="Sign in"
                                                     title="Sign in"
-                                                    class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    class="font-medium tracking-wide text-gray-300transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
                                                     Sign in
                                                 </a>

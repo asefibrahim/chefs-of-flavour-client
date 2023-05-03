@@ -3,21 +3,25 @@ import React from 'react';
 import '@smastrom/react-rating/style.css'
 import { Rating } from '@smastrom/react-rating'
 import { FaCheck, FaHeart } from 'react-icons/fa';
+import LazyLoad from 'react-lazy-load';
 
 const RecipeCard = ({ single }) => {
     const { name, rating, ingredients, image, method } = single
 
     return (
         <div>
+
             <div className="px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:px-8 py-5"
 
             ><div className="flex flex-col  overflow-hidden bg-black border rounded shadow-sm lg:flex-row sm:mx-auto">
 
                     <div className="relative overflow-hidden lg:w-1/2">
-                        <img
-                            src={image}
-                            className="object-cover w-full lg:absolute h-60 lg:h-full   transition hover:scale-125 duration-500 hover:shadow-xl"
-                        />
+                        <LazyLoad>
+                            <img
+                                src={image}
+                                className="object-cover w-full lg:absolute h-60 lg:h-full   transition hover:scale-125 duration-500 hover:shadow-xl"
+                            />
+                        </LazyLoad>
                         <svg
                             className="absolute top-0 right-0 hidden h-full text-black lg:inline-block"
                             viewBox="0 0 20 104"
@@ -80,6 +84,7 @@ const RecipeCard = ({ single }) => {
                     </div>
                 </div>
             </div>
+
 
         </div >
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaHeart, FaChessKing, FaGoogle } from 'react-icons/fa';
 import RecipeCard from './RecipeCard';
+import LazyLoad from 'react-lazy-load';
 
 
 const RecipeBanner = ({ data }) => {
@@ -104,11 +105,13 @@ const RecipeBanner = ({ data }) => {
                             </div>
                         </div>
                         <div className='overflow-hidden'>
-                            <img
-                                className="object-cover w-full h-56 rounded shadow-lg sm:h-96 transition hover:scale-125 duration-500 hover:shadow-xl "
-                                src={image}
-                                alt=""
-                            />
+                            <LazyLoad>
+                                <img
+                                    className="object-cover w-full h-56 rounded shadow-lg sm:h-96 transition hover:scale-125 duration-500 hover:shadow-xl "
+                                    src={image}
+                                    alt=""
+                                />
+                            </LazyLoad>
                         </div>
                     </div>
                 </div>
@@ -117,11 +120,13 @@ const RecipeBanner = ({ data }) => {
 
             <div className='bg-black'>
                 <h1 className='text-6xl font-bold text-center text-gray-200 py-12 '>{name}'s Recipe Here </h1>
+
                 <div className=' '>
                     {
                         data.recipes.map(single => <RecipeCard single={single}></RecipeCard>)
                     }
                 </div>
+
             </div>
         </div>
     );

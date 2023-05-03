@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SingleChefs from './SingleChefs';
+import LazyLoad from 'react-lazy-load';
 
 const Chefs = () => {
     const [Chefs, setChef] = useState([])
@@ -49,12 +50,14 @@ const Chefs = () => {
                         Chefs are responsible for ensuring that the food they prepare is of the highest quality. They select the ingredients, prepare the dishes, and present them in an attractive manner. Good chefs take pride in their work and strive to create dishes that are not only delicious but also visually appealing
                     </p>
                 </div>
-                <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-                    {
-                        Chefs.map(chef => <SingleChefs chef={chef}></SingleChefs>)
-                    }
+                <LazyLoad>
+                    <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                        {
+                            Chefs.map(chef => <SingleChefs chef={chef}></SingleChefs>)
+                        }
 
-                </div>
+                    </div>
+                </LazyLoad>
             </div>
 
 

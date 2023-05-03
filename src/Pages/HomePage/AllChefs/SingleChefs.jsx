@@ -1,6 +1,9 @@
 import React from 'react';
 import { FaHeart, FaChessKing, FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import LazyLoad from 'react-lazy-load';
+import './styles/styles.css'
+
 const SingleChefs = ({ chef }) => {
     console.log(chef);
     const { id, image, name, likes, numRecipes, yearsOfExperience
@@ -9,12 +12,18 @@ const SingleChefs = ({ chef }) => {
     return (
         <div>
             <div>
-                <div className="relative overflow-hidden duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-4xl  transition  hover:border-purple-500/100 hover:shadow-purple-500/100">
-                    <img
-                        className="object-cover w-full h-64 md:max-h-80 xl:h-80"
-                        src={image}
-                        alt="Person"
-                    />
+
+                <div className="relative overflow-hidden duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-4xl  transition  hover:border-purple-500/100 hover:shadow-purple-500/100  ">
+
+
+                    <LazyLoad>
+                        <img
+                            className="object-cover w-full h-64 md:max-h-80 xl:h-80"
+                            src={image}
+                            alt="Person"
+                        />
+                    </LazyLoad>
+
                     <div className="absolute inset-0 flex flex-col justify-center px-5  text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100 pt-8">
                         <p className="mb-1  text-3xl font-bold text-gray-300">
                             {name}
@@ -27,14 +36,14 @@ const SingleChefs = ({ chef }) => {
 
                                 <span
                                     class="inline-flex items-center 
- 
-    
-                                    justify-center 
-    
-                                   
-    
-    ps-3
-                                    py-3 text-gray-300"
+
+
+                justify-center 
+
+               
+
+ps-3
+                py-3 text-gray-300"
                                 >
 
 
@@ -46,7 +55,7 @@ const SingleChefs = ({ chef }) => {
                                 </span>
                                 <span
                                     class="inline-flex items-center justify-center 
-    rounded-full ps-5 py-3 text-gray-300"
+rounded-full ps-5 py-3 text-gray-300"
                                 >
 
 
@@ -62,7 +71,7 @@ const SingleChefs = ({ chef }) => {
                         <div className='py-5 '>
                             <Link to={`/recipe/${id}`}
                                 class="inline-block rounded border-purple-500 border-2
-                                border-current px-8 py-3 text-sm font-medium text-gray-300 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-indigo-500"
+            border-current px-8 py-3 text-sm font-medium text-gray-300 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-indigo-500"
 
                             >
                                 View Recipes
@@ -88,14 +97,15 @@ const SingleChefs = ({ chef }) => {
                             <a
                                 href="/"
                                 className="text-gray-300 transition-colors 
-                                text-xl
-                                duration-300 hover:text-teal-accent-400"
+            text-xl
+            duration-300 hover:text-teal-accent-400"
                             >
                                 <FaGoogle></FaGoogle>
                             </a>
                         </div>
                     </div>
                 </div>
+
             </div>
 
 
