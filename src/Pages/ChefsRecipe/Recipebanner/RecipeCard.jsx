@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import '@smastrom/react-rating/style.css'
 import { Rating } from '@smastrom/react-rating'
 import { FaCheck, FaHeart } from 'react-icons/fa';
 import LazyLoad from 'react-lazy-load';
+import toast, { Toaster } from 'react-hot-toast';
+
 
 const RecipeCard = ({ single }) => {
     const { name, rating, ingredients, image, method } = single
+    const [fav, setFav] = useState(true)
+    const handleAdd = () => {
+        toast.success('Added to favorite');
+        setFav(false)
+
+    }
 
     return (
         <div>
 
-            <div className="px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:px-8 py-5"
+            <div className="px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:px-8 py-5 "
 
             ><div className="flex flex-col  overflow-hidden bg-black border rounded shadow-sm lg:flex-row sm:mx-auto">
 
@@ -59,12 +67,14 @@ const RecipeCard = ({ single }) => {
                             <p className='mt-4 mb-3 text-gray-300 '> <span className='text-xl font-bold text-gray-300'>Method </span>: {method}</p>
                         </div>
 
-                        <div className="flex items-center">
-                            <button
+                        <div className={`flex  justify-between mt-2  `}>
+                            <button onClick={handleAdd}
 
-                                className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide bg-purple-700 text-white hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none    transition hover:scale-110 hover:shadow-xl"
+                                className={`${!fav && " btn-disabled bg-purple-400 "}
+                              flex gap-3
+                              items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide bg-purple-700 text-white hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none    transition hover:scale-110 hover:shadow-xl`}
                             >
-                                Add to Favorite <FaHeart className='text-red-500 '></FaHeart>
+                                {!fav ? <p>Already Added</p> : <p>  Add to Favorite</p>}   <FaHeart className={`${!fav ? "text-red-500" : "text-white"}`}></FaHeart>
                             </button>
                             <a
                                 href="/"
@@ -85,7 +95,7 @@ const RecipeCard = ({ single }) => {
                 </div>
             </div>
 
-
+            <Toaster></Toaster>
         </div >
 
 

@@ -69,7 +69,7 @@ export const Navbar = () => {
                                 </p>
 
 
-                            </li> : <li className="text-white mr-10 font-bold">
+                            </li> : <li className="mr-10 font-bold border rounded-xl px-5 py-2 text-gray-300  transition hover:scale-110 hover:shadow-lg ">
                                 <NavLink className={({ isActive }) => (isActive ? 'text-purple-500' : 'default')} to='/login'>Login</NavLink>
                             </li>
                         }

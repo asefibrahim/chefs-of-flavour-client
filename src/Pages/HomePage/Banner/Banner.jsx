@@ -4,7 +4,7 @@ import { FaBreadSlice } from 'react-icons/fa'
 const Banner = () => {
     return (
         <div>
-            <section class="dark:bg-gray-900 bg-gray-900  md:pt-5 md:px-2">
+            <section class="dark:bg-gray-900 bg-black md:pt-5 md:px-2">
                 <div class="container px-6 py-10 mx-auto">
                     <div class="lg:flex lg:items-center">
                         <div class="w-full space-y-12 lg:w-1/2 ">
