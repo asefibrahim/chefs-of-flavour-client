@@ -119,7 +119,7 @@ const RecipeBanner = ({ data }) => {
 
 
             <div className='bg-black'>
-                <h1 className='text-6xl font-bold text-center text-gray-200 py-12 '>{name}'s Recipe Here </h1>
+                <h1 className='text-6xl font-bold text-center text-gray-200 py-12 '> <span className='text-purple-500'>Here's</span>  {name}'s <span className='text-purple-500'>Recipe</span> </h1>
 
                 <div className=' '>
                     {

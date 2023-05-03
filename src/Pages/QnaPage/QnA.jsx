@@ -19,7 +19,7 @@ const QnA = () => {
             </div>
 
 
-            <section class="bg-black " ref={ref}>
+            <section class="bg-black ">
                 <div class="container px-6 py-12 mx-auto">
                     <h1 class="text-2xl font-semibold text-gray-300 text-center lg:text-3xl dark:text-white">Frequently asked questions.</h1>
 
@@ -31,8 +31,8 @@ const QnA = () => {
                                 </svg>
                             </div>
 
-                            <div>
-                                <h1 class="text-xl font-semibold text-gray-300 dark:text-white"> Tell us the differences between uncontrolled and controlled components.</h1>
+                            <div ref={ref} className=''>
+                                <h1 class="text-xl font-semibold text-gray-300 "> Tell us the differences between uncontrolled and controlled components.</h1>
 
                                 <p class="mt-2 text-sm text-gray-300 dark:text-gray-300">
                                     Uncontrolled components are form elements where the data is handled by the DOM (Document Object Model) rather than the React component. In other words, the form element is responsible for managing its own state. When the user interacts with the form, the DOM updates the element's state and the React component can access the updated value via the DOM.

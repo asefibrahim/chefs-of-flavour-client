@@ -19,7 +19,7 @@ const ErrorPage = () => {
                             <span className='sr-only'>Error</span> {status || 404}
                         </h2>
                         <h1 class="text-2xl font-bold tracking-tight text-gray-300 sm:text-4xl">
-                            {error.message}
+                            {error?.message}
                         </h1>
 
                         <p class="mt-4 text-gray-300">

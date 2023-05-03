@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
-import { updateProfile } from 'firebase/auth';
+
 const Login = () => {
     const { signIn, googleSignIn, gitHubSignIn } = useContext(AuthContext)
     const [error, setError] = useState('')
@@ -31,6 +31,7 @@ const Login = () => {
                 const newLoggedUser = result.user
                 console.log(newLoggedUser);
                 setSuccess("You Have Successfully Logged in by Github")
+                navigate(from, { replace: true })
                     .catch(error => {
                         setError(error.message)
                     })
@@ -53,6 +54,7 @@ const Login = () => {
                 const NewUser = result.user
                 console.log(NewUser);
                 setSuccess('You Have Successfully Logged in')
+                navigate(from, { replace: true })
                 form.reset()
             })
             .catch(error => {
