@@ -13,12 +13,12 @@ const Chefs = () => {
 
     return (
         <div>
-            <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 bg-gray-900">
-                <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+            <div className="px-4 py-16 w-full  lg:px-8 lg:py-20 bg-gray-900">
+                <div className="max-w-xl mb-10 md:mx-auto sm:text-center  lg:max-w-2xl md:mb-12">
                     <div>
 
                     </div>
-                    <h2 className="max-w-lg mb-6 font-sans text-4xl font-bold leading-none tracking-tight text-gray-300 sm:text-4xl md:mx-auto">
+                    <h2 className=" mb-6 font-sans text-4xl font-bold leading-none tracking-tight text-gray-300 sm:text-4xl md:mx-auto sm:text-center">
                         <span className="relative inline-block">
 
                             <span className="relative text-5xl text-purple-500">Here's </span>
@@ -30,7 +30,7 @@ const Chefs = () => {
                     </p>
                 </div>
                 <LazyLoad>
-                    <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                    <div className="grid gap-10 sm:grid-cols-1 lg:grid-cols-3">
                         {
                             Chefs.map(chef => <SingleChefs chef={chef}></SingleChefs>)
                         }

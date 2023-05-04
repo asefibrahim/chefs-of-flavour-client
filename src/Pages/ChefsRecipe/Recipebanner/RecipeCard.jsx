@@ -19,7 +19,7 @@ const RecipeCard = ({ single }) => {
     return (
         <div>
 
-            <div className="px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:px-8 py-5 "
+            <div className="px-4  mx-auto sm:max-w-xl md:max-w-full  lg:px-8 py-5 "
 
             ><div className="flex flex-col  overflow-hidden bg-black border rounded shadow-sm lg:flex-row sm:mx-auto">
 

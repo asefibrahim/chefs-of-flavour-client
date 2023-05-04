@@ -12,7 +12,7 @@ export const Navbar = () => {
     }
     return (
         <div class="bg-gray-900">
-            <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+            <div class="px-4 py-5 mx-auto  md:max-w-full  md:px-24 lg:px-8">
                 <div class="relative flex grid items-center grid-cols-2 lg:grid-cols-3">
                     <ul class="flex items-center hidden space-x-8 lg:flex">
                         <li>
@@ -50,7 +50,7 @@ export const Navbar = () => {
                         <FaNutritionix></FaNutritionix>
 
                         <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
-                            Cheifes Of <span className="text-purple-500">Flavour</span>
+                            Chiefs Of <span className="text-purple-500">Flavour</span>
                         </span>
                     </a>
                     <ul class=" items-center hidden ml-auto space-x-8 lg:flex">

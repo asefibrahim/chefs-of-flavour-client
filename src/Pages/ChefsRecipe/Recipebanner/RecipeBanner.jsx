@@ -13,7 +13,7 @@ const RecipeBanner = ({ data }) => {
     return (
         <div>
             <div className="relative bg-[url(https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)] bg-cover bg-center bg-no-repeat h-[700px] " >
-                <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 absolute inset-0 bg-black/50  sm:from-white/95 sm:to-white/25 ">
+                <div className="px-4 py-16 mx-auto  md:max-w-full  md:px-24 lg:px-8 lg:py-20 absolute inset-0 bg-black/50  sm:from-white/95 sm:to-white/25 ">
                     <div className="grid gap-10 row-gap-8 lg:grid-cols-2">
                         <div className="flex flex-col justify-center">
                             <div className="max-w-xl mb-6">
